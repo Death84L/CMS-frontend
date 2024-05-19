@@ -34,13 +34,13 @@ const DeleteSchema = () => {
     ) {
       try {
         await axios.delete(
-          `http://localhost:8000/user/deleteSchema/${schemaId}`
+          `https://cms-backend-yu8p.onrender.com/user/deleteSchema/${schemaId}`
         );
         toast.success("Schema deleted successfully");
 
         // Refresh the list of schemas after deletion
         const response = await axios.get(
-          `http://localhost:8000/user/getUserSchema`,
+          `https://cms-backend-yu8p.onrender.com/user/getUserSchema`,
           {
             params: { userId },
           }
