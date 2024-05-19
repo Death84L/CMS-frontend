@@ -87,7 +87,7 @@ function NewSchema() {
 
     try {
       // const link = import.meta.env.VITE_SITE_LINK + "/user/createUserSchema";
-      const link="http://localhost:8000/user/createUserSchema";
+      const link="https://cms-backend-yu8p.onrender.com/user/createUserSchema";
       const response = await axios.post(link, data);
       console.log(response);
       toast.success("Added table successfully");
