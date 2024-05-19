@@ -19,7 +19,7 @@ const SchemaContents = () => {
       try {
         // Fetch the schema details
         const schemaResponse = await axios.get(
-          `http://localhost:8000/user/getUserSchema`,
+          `https://cms-backend-yu8p.onrender.com/user/getUserSchema`,
           {
             params: { userId },
           }
@@ -33,7 +33,7 @@ const SchemaContents = () => {
 
         // Fetch the data based on the schema
         const dataResponse = await axios.post(
-          `http://localhost:8000/user/getData`,
+          `https://cms-backend-yu8p.onrender.com/user/getData`,
           {
             schemaId: id,
             userId,
@@ -52,7 +52,7 @@ const SchemaContents = () => {
   const handleDelete = async (itemId) => {
     try {
       await axios.delete(
-        `http://localhost:8000/user/deleteData/${itemId}`,
+        `https://cms-backend-yu8p.onrender.com/user/deleteData/${itemId}`,
         {
           data: { userId },
         }
@@ -70,7 +70,7 @@ const SchemaContents = () => {
       if (selectedData) {
         // Update existing data
         const response = await axios.put(
-          `http://localhost:8000/user/updateData/${
+          `https://cms-backend-yu8p.onrender.com/user/updateData/${
             selectedData._id
           }`,
           {
@@ -89,7 +89,7 @@ const SchemaContents = () => {
         // Add new data
         console.log("7476")
         const response = await axios.post(
-          `http://localhost:8000/user/addData`,
+          `https://cms-backend-yu8p.onrender.com/user/addData`,
           {
             schemaId: id,
             userId,
