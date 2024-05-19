@@ -1,3 +1,3 @@
 # React + Vite
 
-Project Link : https://github.com/Death84L/CMS-frontend
+Project Link : https://cms-frontend-ruddy.vercel.app/
